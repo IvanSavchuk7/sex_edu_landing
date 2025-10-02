@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Heading Now Bold';
+    src: url('assets/fonts/HeadingNowBold.ttf') format('woff');
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heading Now Medium';
+    src: url('assets/fonts/HeadingNowMedium.ttf') format('woff');
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heading Now Regular';
+    src: url('assets/fonts/HeadingNowRegular.ttf') format('woff');
+    font-display: swap;
+}
+html {
+    font-size: 20px;
+    background: #181818;
+    scroll-behavior: smooth;
+    font-synthesis: none;
+}
+body {
+    transition: opacity 0.3s ease;
+}
+body.loading {
+    pointer-events: none;
+    overflow: hidden;
+}
+html main {
+    overflow: hidden;
+    background: linear-gradient(109deg, #4A0100 3%, #810202 50.99%, #4A0100 77.64%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 120%;
+    text-decoration: none;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+}
+header {
+    padding: 2rem 4rem;
+    background-image: url("assets/images/header-star-4.png"), url("assets/images/author.png"), url("assets/images/header-star-1.png"), url("assets/images/header-star-2.png"), url("assets/images/header-star-3.png"), url("assets/images/header-star-5.png");
+    background-size: 10vw auto, contain, 10vw auto, 20vw auto, 25vw auto, 10vw auto;
+    background-repeat: no-repeat;
+    background-position: bottom right, top right, top left, 75% 50%, 100% 0, bottom left;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1.5rem;
+}
+header > nav ul {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(99, 0, 0, 0.32);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+}
+header > nav ul li {
+    padding: 1rem 2rem;
+    list-style-type: none;
+}
+header > .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+header > .content .tooltip {
+    display: flex;
+    align-items: center;
+    padding: 8px 1rem 8px 8px;
+    gap: .5rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #C51D1D;
+    width: fit-content;
+    font-size: 1.5rem;
+}
+header > .content .tooltip img {
+    width: 2rem;
+    height: 2rem;
+}
+header > .content .title {
+    font-family: 'Heading Now Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 5.5rem;
+    font-weight: 700;
+    background: linear-gradient(124deg, #FFF3F4 30.02%, #F3C4C8 81.08%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header > .content .text {
+    font-size: 1.2rem;
+}
+header > .content .text-sm {
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+header > .content .text-stats {
+    display: flex;
+    gap: .5rem;
+    padding: .5rem 1rem;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(99, 0, 0, 0.32);
+    width: fit-content;
+}
+header > .content .text-stats .num {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+header > .content .text-stats > div:last-child {
+
+}
+a {
+    text-decoration: none;
+    width: fit-content;
+    font-size: 2rem;
+    font-family: 'Heading Now Medium', sans-serif;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    border: 1px solid #D83737;
+    background: linear-gradient(180deg, #F36464 0%, #BA0000 100%);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 1px 1px 0.25px 1px rgba(255, 255, 255, 0.30) inset, 0 2px 1px 1px rgba(255, 255, 255, 0.50) inset;
+}
+section.course {
+    padding: 4rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-image: url("assets/images/program-star-1.png"), url("assets/images/program-star-2.png");
+    background-repeat: no-repeat;
+    background-position: top left, top right;
+    background-size: 10vw auto, 10vw auto;
+}
+section.course > .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+section.course > .content > .course-item{
+    --gap: 0;
+    --left: 100%;
+    --right: 0%;
+    --minh: 0;
+
+    display: flex;
+    gap: var(--gap);
+    padding: 1rem;
+    border-radius: 32px;
+    border: 2px solid rgba(255, 255, 255, 0.20);
+    min-height: var(--minh);
+    cursor: pointer;
+    align-items: stretch;
+    transition: gap 1s ease, min-height 1s ease;
+
+    overflow: hidden;
+}
+
+section.course > .content > .course-item.is-open{
+    --gap: 2rem;
+    --left: 28%;
+    --right: 72%;
+    --minh: 40vh;
+}
+
+section.course .course-item > .left{
+    flex: 1 1 var(--left);
+    min-width: 0;
+    box-sizing: border-box;
+
+    padding: 1.25rem;
+    border-radius: 24px;
+    background: linear-gradient(124deg, #FFF3F4 30.02%, #F3C4C8 81.08%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1rem;
+    overflow: hidden;
+    transition:
+            flex-basis 1.2s cubic-bezier(.22,.61,.36,1),
+            border-radius .9s ease;
+}
+section.course .course-item > .left .num{
+    font-size: .9rem;
+    padding: 8px 1.5rem;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: #770403;
+    width: fit-content;
+}
+section.course .course-item > .left .title{
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    min-width: 0;
+}
+section.course .course-item > .left .title > span{
+    color: #770403;
+    font-family: 'Heading Now Bold', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.1;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transition: font-size .9s ease;
+}
+
+section.course .course-item > .left .title img{
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    transition:
+            transform .9s ease,
+            opacity .8s ease .8s,
+            width .8s ease .8s,
+            margin-left .8s ease .8s;
+}
+section.course .course-item.is-open > .left .title img{
+    transform: rotate(180deg);
+    opacity: 0;
+    width: 0;
+    min-width: 0;
+    margin-left: 0;
+    pointer-events: none;
+}
+
+section.course .course-item:not(.is-open) > .left .title br{ display:none; }
+section.course .course-item.is-open > .left .title br{ display:inline; }
+
+section.course .course-item > .right{
+    flex: 1 1 var(--right);
+    min-width: 0;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    max-height: 0;      /* collapsed */
+    padding: 0;
+
+    transition:
+            flex-basis 1s cubic-bezier(.22,.61,.36,1),
+            opacity .9s ease,
+            max-height .9s ease,
+            padding .9s ease;
+}
+
+section.course .course-item.is-open > .right{
+    opacity: 1;
+    pointer-events: auto;
+    max-height: 600px;   /* set to a safe value slightly above your tallest content */
+    padding: 1rem 0;
+}
+
+section.course .course-item > .right .list{ display:flex; flex-direction:column; gap:1rem; min-width:0; }
+section.course .course-item > .right .list > .item{ display:flex; gap:.5rem; align-items:center; min-width:0; }
+section.course .course-item > .right .list > .item img{ width:1rem; height:1rem; min-width:1rem; }
+section.course .course-item > .right .list > .item p{
+    font-size:1.2rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+section.course .course-item > .right .result-text{ min-width:0; }
+section.course .course-item > .right .result-text > div:last-child{
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    max-width: 100%;
+}
+section.course .course-item > .right .result-text > div:first-child {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+section.course .course-item > .right .result-text > div:last-child {
+    font-size: .9rem;
+    padding-top: .5rem;
+}
+section.course > .title{ text-align: center; }
+main > section .title{
+    font-family: 'Heading Now Medium', sans-serif;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce){
+    section.course > .content > .course-item,
+    section.course .course-item > .left,
+    section.course .course-item > .right{ transition: none; }
+}
+section.course .course-item.is-open > .left .title > span {
+    font-size: 1.6rem;
+}
+
+
