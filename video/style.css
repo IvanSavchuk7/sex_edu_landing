@@ -1,0 +1,447 @@
+@font-face {
+    font-family: 'Heading Now Bold';
+    src: url('../assets/fonts/HeadingNowBold.ttf') format('woff');
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heading Now Medium';
+    src: url('../assets/fonts/HeadingNowMedium.ttf') format('woff');
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Heading Now Regular';
+    src: url('../assets/fonts/HeadingNowRegular.woff') format('woff');
+    font-display: swap;
+}
+html {
+    font-size: 20px;
+    background: #181818;
+    scroll-behavior: smooth;
+    font-synthesis: none;
+}
+body {
+    transition: opacity 0.3s ease;
+}
+body.loading {
+    pointer-events: none;
+    overflow: hidden;
+}
+html main {
+    overflow: hidden;
+    background: linear-gradient(109deg, #4A0100 3%, #810202 50.99%, #4A0100 77.64%);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 120%;
+    text-decoration: none;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+}
+header {
+    padding: 4rem;
+    background-image: url("../assets/images/header-star-2.png"), url("../assets/images/header-star-2.png"), url("../assets/images/header-star-2.png"), url("../assets/images/header-star-3.png");
+    background-size: 18vw auto, 20vw auto, 20vw auto, 20vw auto;
+    background-repeat: no-repeat;
+    background-position: -9.5vw 50%, calc(100% + 10vw) -11vw, 95% calc(100% + 10vw), 25% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+header > .title,
+section.form .title {
+    text-align: center;
+    font-family: 'Heading Now Medium', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(124deg, #FFF3F4 30.02%, #F3C4C8 81.08%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header .content > .video-wrapper {
+    border-radius: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: #C51D1D;
+    backdrop-filter: blur(9.420666694641113px);
+    width: 80%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 16px;
+    display: block;
+}
+section.form {
+    padding: 0 4rem;
+    background-image: url("../assets/images/header-star-2.png");
+    background-size: 20vw auto;
+    background-repeat: no-repeat;
+    background-position: 95% -10vw;
+}
+section.form .title {
+    text-align: left;
+    padding-left: .5rem;
+}
+section.form .content {
+    display: flex;
+}
+section.form .content > div {
+    flex: 1;
+}
+section.form .content > .right img {
+    width: 100%;
+    height: auto;
+
+}
+section.form .content > .left img.mobile {
+    display: none;
+}
+section.form .content > .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+}
+section.form .content > .left .form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    background: linear-gradient(124deg, #FFF3F4 30.02%, #F3C4C8 81.08%);
+    border-radius: 32px;
+    width: 90%;
+}
+section.form .content > .left .form .input-wrap {
+    display:block;
+    background: linear-gradient(90deg, #F2E6E6 0%, #E2B2B6 100%);
+    border-radius:16px;
+    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    position:relative;
+}
+.form .input-wrap > input {
+    width:100%;
+    background:transparent;
+    border:0;
+    outline:0;
+    color: #4A0100;
+    font-size:1.3rem;
+    font-weight:400;
+}
+.form .input-wrap > input::placeholder{ color: rgba(74, 1, 0, 0.5); }
+form .cta {
+    text-decoration: none;
+    font-size: 2.5rem;
+    font-family: 'Heading Now Medium', sans-serif;
+    text-transform: uppercase;
+    border-radius:16px;
+    border: 1px solid #D83737;
+    background: linear-gradient(180deg, #F36464 0%, #BA0000 100%);
+    box-shadow: none;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+section.form .content .left .tooltip {
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+section.form .content .left .tooltip::before {
+    position: absolute;
+    content: '';
+    left: .5rem;
+    height: 100%;
+    width: .5rem;
+    background: #C51D1D;
+}
+/* From Uiverse.io by mobinkakei */
+.wrapper {
+    width: 10rem;
+    height: 3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.circle {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 15%;
+    transform-origin: 50%;
+    animation: circle7124 .5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+    0% {
+        top: 60px;
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+    }
+
+    40% {
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+
+    100% {
+        top: 0%;
+    }
+}
+
+.circle:nth-child(2) {
+    left: 45%;
+    animation-delay: .2s;
+}
+
+.circle:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}
+
+.shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow046 .5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+    0% {
+        transform: scaleX(1.5);
+    }
+
+    40% {
+        transform: scaleX(1);
+        opacity: .7;
+    }
+
+    100% {
+        transform: scaleX(.2);
+        opacity: .4;
+    }
+}
+
+.shadow:nth-child(4) {
+    left: 45%;
+    animation-delay: .2s
+}
+
+.shadow:nth-child(5) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+}
+
+
+@media screen and (min-width: 2560px) and (max-width: 3840px) {
+    html {
+        font-size: 24px;
+    }
+    header,
+    section.course,
+    section.bonus,
+    section.tariffs {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+@media only screen and (min-width: 1921px) and (max-width: 2559px) {
+    html {
+        font-size: 22px;
+    }
+}
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+    header > .title,
+    section.form .title{
+        font-size: 4rem;
+    }
+}
+@media only screen and (min-width: 1240px) and (max-width: 1440px) {
+    html {
+        font-size: 16px;
+    }
+    header > .title,
+    section.form .title {
+        font-size: 4.5rem;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1239px) {
+    html {
+        font-size: 14px;
+    }
+    header > .title {
+        font-size: 4rem;
+    }
+}
+@media only screen and (min-width: 830px) and (max-width: 1239px) {
+    html {
+        font-size: 12px;
+    }
+    header {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    header > .title,
+    section.form .title {
+        font-size: 4rem;
+    }
+    section.form .content > .left {
+        flex: 2.5;
+    }
+    section.form .content > .right {
+        flex: 3;
+    }
+    section.form .content > .left .form > form {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    form .cta {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 829px) {
+    header {
+        background-size: 23vw auto, 20vw auto, 25vw auto, 25vw auto;
+        background-position: -12.5vw 35%, calc(100% + 10vw) -10vw, 98% calc(100% + 12.5vw), 25% 0;
+    }
+    section.form {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background-image: url("../assets/images/header-star-2.png");
+        background-size: 25vw auto;
+        background-repeat: no-repeat;
+        background-position: 98% -12.5vw;
+    }
+    section.form .content > .left {
+        align-items: center;
+    }
+    section.form .content > .left img.mobile {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin-bottom: -9rem;
+        margin-top: -1rem;
+    }
+    section.form .content > .left > div,
+    section.form .content > .left > .form form {
+        width: 100%;
+    }
+    section.form .content > .left > .form form {
+        padding: 2.5rem 2rem;
+    }
+    header > .title,
+    section.form .title {
+        font-size: 3rem;
+    }
+    header > .title br {
+        display: none;
+    }
+    header .content > .video-wrapper {
+        width: 90%;
+    }
+    section.form .content > .right {
+        display: none;
+    }
+}
+@media only screen and (max-width: 829px) {
+    html {
+        font-size: 14px;
+    }
+    header,
+    section.form {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 16px;
+    }
+    header,
+    section.form {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    header > .title,
+    section.form .title {
+        font-size: 2.25rem;
+    }
+    header > .title br {
+        display: none;
+    }
+    header .content > .video-wrapper {
+        width: 100%;
+    }
+    form .cta {
+        font-size: 1.5rem;
+    }
+    section.form .content > .left .form .input-wrap {
+        padding: 1rem;
+    }
+    section.form .content .left .tooltip {
+        font-size: 1.35rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2rem;
+    }
+    section.form .content > .left > .form form {
+        padding: 1.5rem 1.25rem;
+    }
+    section.form .content .left .tooltip {
+        font-size: 1.25rem;
+    }
+}
+@media only screen and (max-width: 421px) {
+    html {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    html {
+        font-size: 14px;
+    }
+    header > .title {
+        font-size: 1.8rem;
+    }
+}
+@media only screen and (max-width: 355px) {
+    html {
+        font-size: 13px;
+    }
+}
