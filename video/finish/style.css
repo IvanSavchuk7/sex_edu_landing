@@ -1,0 +1,113 @@
+section.form {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/images/header-star-2.png"), url("../../assets/images/header-star-2.png");
+    background-size: 20vw auto, 15vw auto;
+    background-repeat: no-repeat;
+    background-position: 95% -10vw, -7.5vw calc(100% + 7.5vw);
+    padding: 2rem 4rem;
+}
+section.form .title {
+    font-size: 2.75rem;
+}
+section.form .content {
+    gap: 0;
+    align-items: center;
+}
+section.form .content > .right img {
+    width: 100%;
+}
+@media only screen and (min-width: 1490px) and (max-width: 1920px) {
+    section.form .content .right {
+        flex: 4;
+    }
+    form .cta {
+        font-size: 2rem;
+    }
+}
+@media only screen and (min-width: 1240px) and (max-width: 1440px) {
+    form .cta {
+        font-size: 2rem;
+    }
+    section.form .title {
+        font-size: 2.5rem;
+    }
+    section.form .content > .left .form > form {
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1239px) {
+    section.form .title {
+        font-size: 2.5rem;
+    }
+}
+@media only screen and (min-width: 830px) and (max-width: 1024px) {
+    section.form {
+        padding-right: 0;
+    }
+    section.form .content > .left .form .input-wrap {
+        padding: 1rem 1rem 1rem 1.5rem;
+        border-radius: 12px;
+    }
+    section.form .content > .left .form > form {
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+        border-radius: 20px;
+    }
+    section.form .content > .right {
+        flex: 4;
+    }
+    section.form .content > .left {
+        flex: 4.25;
+    }
+    section.form .content > .right img {
+        width: 120%;
+        margin-right: -20%;
+    }
+    section.form .title {
+        font-size: 2.25rem;
+    }
+}
+@media only screen and (max-width: 829px) {
+    section.form {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    section.form .content > .left img.mobile {
+        width: 90%;
+        height: auto;
+        display: block;
+        margin-bottom: -4rem;
+    }
+    section.form .title {
+        font-size: 2.55rem;
+    }
+    section.form .title br {
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    section.form {
+        padding: 3rem 1.5rem;
+        background-size: 25vw auto, 25vw auto;
+        background-repeat: no-repeat;
+        background-position: 95% -10vw, -7.5vw calc(100% + 7.5vw);
+    }
+    section.form .title {
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    section.form {
+        padding: 3rem 1rem;
+    }
+    section.form .title {
+        font-size: 1.75rem;
+    }
+}
+@media only screen and (max-width: 365px) {
+    html {
+        font-size: 13px;
+    }
+}

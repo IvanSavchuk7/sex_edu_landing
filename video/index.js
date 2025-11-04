@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(r => r.json())
             .then(data => {
                 if (data.result === "success") {
-                    setTimeout(() => { window.location.href = "https://google.com/"; }, 100);
+                    setTimeout(() => { window.location.href = "https://t.me/yenmapleofficial_bot/"; }, 100);
                 } else {
                     // restore on failure
                     submitBtn.innerHTML = originalContent;

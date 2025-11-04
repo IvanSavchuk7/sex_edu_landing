@@ -43,6 +43,18 @@ html main {
     border: none;
     font-family: 'PT Sans', sans-serif;
 }
+a:not(.link) {
+    text-decoration: none;
+    width: fit-content;
+    font-size: 2rem;
+    font-family: 'Heading Now Medium', sans-serif;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    border: 1px solid #D83737;
+    background: linear-gradient(180deg, #F36464 0%, #BA0000 100%);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.30), 1px 1px 0.25px 1px rgba(255, 255, 255, 0.30) inset, 0 2px 1px 1px rgba(255, 255, 255, 0.50) inset;
+}
 header {
     padding: 4rem;
     background-image: url("../assets/images/header-star-2.png"), url("../assets/images/header-star-2.png"), url("../assets/images/header-star-2.png"), url("../assets/images/header-star-3.png");
@@ -98,12 +110,13 @@ section.form .title {
 }
 section.form .content {
     display: flex;
+    gap: 3rem;
 }
 section.form .content > div {
     flex: 1;
 }
 section.form .content > .right img {
-    width: 100%;
+    width: 80%;
     height: auto;
 
 }
@@ -171,7 +184,6 @@ section.form .content .left .tooltip::before {
     width: .5rem;
     background: #C51D1D;
 }
-/* From Uiverse.io by mobinkakei */
 .wrapper {
     width: 10rem;
     height: 3rem;
@@ -260,7 +272,9 @@ section.form .content .left .tooltip::before {
     right: 15%;
     animation-delay: .3s;
 }
-
+section.form .title {
+    font-size: 3rem;
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
@@ -278,23 +292,42 @@ section.form .content .left .tooltip::before {
     html {
         font-size: 22px;
     }
+    section.form .title {
+        font-size: 2.5rem;
+    }
 }
 @media only screen and (min-width: 1441px) and (max-width: 1920px) {
     html {
         font-size: 18px;
     }
-    header > .title,
-    section.form .title{
+    header > .title {
         font-size: 4rem;
+    }
+    section.form .title {
+        font-size: 2.5rem;
+    }
+    section.form .content {
+        gap: 1.5rem;
+    }
+    section.form .content .left {
+        flex: 4;
+    }
+    section.form .content .right {
+        flex: 3;
     }
 }
 @media only screen and (min-width: 1240px) and (max-width: 1440px) {
     html {
         font-size: 16px;
     }
-    header > .title,
-    section.form .title {
+    header > .title {
         font-size: 4.5rem;
+    }
+    section.form .title {
+        font-size: 2.25rem;
+    }
+    section.form .content {
+        gap: 1rem;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1239px) {
@@ -303,6 +336,15 @@ section.form .content .left .tooltip::before {
     }
     header > .title {
         font-size: 4rem;
+    }
+    section.form .title {
+        font-size: 2.25rem;
+    }
+    section.form .content > .right img {
+        width: 90%;
+    }
+    section.form .content {
+        gap: 1rem;
     }
 }
 @media only screen and (min-width: 830px) and (max-width: 1239px) {
@@ -313,8 +355,7 @@ section.form .content .left .tooltip::before {
         padding-left: 2rem;
         padding-right: 2rem;
     }
-    header > .title,
-    section.form .title {
+    header > .title {
         font-size: 4rem;
     }
     section.form .content > .left {
@@ -330,6 +371,16 @@ section.form .content .left .tooltip::before {
     form .cta {
         font-size: 2rem;
     }
+    section.form .content {
+        gap: 0;
+    }
+    section.form .content > .right img {
+        width: 100%;
+    }
+    section.form .title {
+        font-size: 1.8rem;
+    }
+
 }
 @media only screen and (max-width: 829px) {
     header {
@@ -361,9 +412,12 @@ section.form .content .left .tooltip::before {
     section.form .content > .left > .form form {
         padding: 2.5rem 2rem;
     }
-    header > .title,
-    section.form .title {
+    header > .title {
         font-size: 3rem;
+    }
+    section.form .title {
+        font-size: 2.5rem;
+        text-align: center;
     }
     header > .title br {
         display: none;
@@ -384,6 +438,12 @@ section.form .content .left .tooltip::before {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+    a:not(.link) {
+        width: 80%;
+        text-align: center;
+        font-size: 3rem;
+        margin-top: -2rem;
+    }
 }
 @media only screen and (max-width: 600px) {
     html {
@@ -394,8 +454,7 @@ section.form .content .left .tooltip::before {
         padding-left: 1rem;
         padding-right: 1rem;
     }
-    header > .title,
-    section.form .title {
+    header > .title {
         font-size: 2.25rem;
     }
     header > .title br {
@@ -413,6 +472,13 @@ section.form .content .left .tooltip::before {
     section.form .content .left .tooltip {
         font-size: 1.35rem;
     }
+    a:not(.link) {
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+    section.form .title {
+        font-size: 1.75rem;
+    }
 }
 @media only screen and (max-width: 480px) {
     header {
@@ -425,6 +491,16 @@ section.form .content .left .tooltip::before {
     }
     section.form .content .left .tooltip {
         font-size: 1.25rem;
+    }
+    a:not(.link) {
+        width: 100%;
+        font-size: 2.25rem;
+    }
+    section.form .content > .left img.mobile {
+        width: 90%;
+    }
+    section.form .title {
+        font-size: 1.5rem;
     }
 }
 @media only screen and (max-width: 421px) {
